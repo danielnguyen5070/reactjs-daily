@@ -15,7 +15,7 @@ export async function loginApi(email: string, password: string) {
     }
 
     // fake credentials
-    if (e === "user@example.com" && p === "password123") {
+    if (e === "user@gmail.com" && p === "12345") {
         // return a fake token and user object
         return {
             error: null,

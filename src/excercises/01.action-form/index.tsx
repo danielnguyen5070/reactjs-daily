@@ -1,19 +1,12 @@
 import React, { useState } from "react";
 import { loginApi } from "./fakeApi";
 
-type User = {
-	id: number;
-	name: string;
-	email: string;
-} | null;
-
 export default function LoginForm() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState("");
-	const [user, setUser] = useState<User>(null);
 
 	async function handleSubmit(e: React.FormEvent) {
 		e.preventDefault();
@@ -32,7 +25,6 @@ export default function LoginForm() {
 			localStorage.setItem("authToken", res.token || "");
 		} catch (ignore) { }
 
-		setUser(res.user || null);
 		setEmail("");
 		setPassword("");
 	}
@@ -43,14 +35,6 @@ export default function LoginForm() {
 				<h2 className="text-3xl font-semibold text-white mb-6">
 					Sign In
 				</h2>
-
-				{user && (
-					<div className="mb-4 p-4 bg-green-900/40 border border-green-700 rounded-lg">
-						<p className="text-sm text-green-300">
-							Logged in as <span className="font-semibold text-green-200">{user.name}</span>
-						</p>
-					</div>
-				)}
 
 				<form onSubmit={handleSubmit} className="space-y-5">
 					<div>
@@ -99,7 +83,7 @@ export default function LoginForm() {
 
 				<div className="mt-6 text-xs text-gray-500 text-center">
 					<p>Demo credentials:
-						<span className="text-gray-300"> user@example.com / password123</span>
+						<span className="text-gray-300"> user@gmail.com / 12345</span>
 					</p>
 				</div>
 			</div>
