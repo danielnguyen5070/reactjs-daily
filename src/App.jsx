@@ -2,8 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import ProfileForm from "./excercises/01.action-form";
-
-const routes = [{ path: "/action-form", element: <ProfileForm /> }];
+import ReactHookForm from "./excercises/02.react-hook-form";
+import CodeSplitting from "./excercises/03.code-splitting";
+const routes = [
+	{ path: "/action-form", element: <ProfileForm /> },
+	{ path: "/react-hook-form", element: <ReactHookForm /> },
+	{ path: "/code-splitting", element: <CodeSplitting /> },
+];
 
 function App() {
 	const [sidebarOpen, setSidebarOpen] = React.useState(false);

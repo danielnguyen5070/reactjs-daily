@@ -6,6 +6,14 @@ const menuItems = [
         label: 'Form Action',
         path: '/action-form',
     },
+    {
+        label: 'React Hook Form',
+        path: '/react-hook-form',
+    },
+    {
+        label: 'Code Splitting',
+        path: '/code-splitting',
+    },
 ];
 
 const Sidebar = () => {
