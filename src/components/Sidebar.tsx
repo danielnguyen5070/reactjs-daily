@@ -14,6 +14,10 @@ const menuItems = [
         label: 'Code Splitting',
         path: '/code-splitting',
     },
+    {
+        label: 'Debounce Input',
+        path: '/debounce-input',
+    },
 ];
 
 const Sidebar = () => {
