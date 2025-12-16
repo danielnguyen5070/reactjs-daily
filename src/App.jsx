@@ -4,13 +4,13 @@ import Sidebar from "./components/Sidebar";
 import ProfileForm from "./excercises/01.action-form";
 import ReactHookForm from "./excercises/02.react-hook-form";
 import CodeSplitting from "./excercises/03.code-splitting";
-import DebounceInput from "./excercises/04.debounce";
+import PokemonSearch from "./excercises/04.debounce";
 
 const routes = [
 	{ path: "/action-form", element: <ProfileForm /> },
 	{ path: "/react-hook-form", element: <ReactHookForm /> },
 	{ path: "/code-splitting", element: <CodeSplitting /> },
-	{ path: "/debounce-input", element: <DebounceInput /> },
+	{ path: "/debounce-input", element: <PokemonSearch /> },
 ];
 
 function App() {

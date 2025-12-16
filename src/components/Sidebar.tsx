@@ -15,7 +15,7 @@ const menuItems = [
         path: '/code-splitting',
     },
     {
-        label: 'Debounce Input',
+        label: 'Debounce Search',
         path: '/debounce-input',
     },
 ];
