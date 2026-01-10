@@ -6,12 +6,15 @@ import ReactHookForm from "./excercises/02.react-hook-form";
 import CodeSplitting from "./excercises/03.code-splitting";
 import PokemonSearch from "./excercises/04.debounce";
 import FlexGrid from "./excercises/05.tailwindcss-flex-grid";
+import Todo from "./excercises/06.to-do-list";
 
 const routes = [
 	{ path: "/action-form", element: <ProfileForm /> },
 	{ path: "/react-hook-form", element: <ReactHookForm /> },
 	{ path: "/code-splitting", element: <CodeSplitting /> },
 	{ path: "/debounce-input", element: <PokemonSearch /> },
+	{ path: "/flex-grid", element: <FlexGrid /> },
+	{ path: "/to-do", element: <Todo /> },
 ];
 
 function App() {

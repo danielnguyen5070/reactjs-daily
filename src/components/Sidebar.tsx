@@ -20,7 +20,11 @@ const menuItems = [
     },
     {
         label: 'TailwindCSS Flex Grid',
-        path: '/tailwindcss-flex-grid',
+        path: '/flex-grid',
+    },
+    {
+        label: 'Todo',
+        path: '/to-do',
     },
 ];
 
