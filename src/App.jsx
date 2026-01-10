@@ -5,6 +5,7 @@ import ProfileForm from "./excercises/01.action-form";
 import ReactHookForm from "./excercises/02.react-hook-form";
 import CodeSplitting from "./excercises/03.code-splitting";
 import PokemonSearch from "./excercises/04.debounce";
+import FlexGrid from "./excercises/05.tailwindcss-flex-grid";
 
 const routes = [
 	{ path: "/action-form", element: <ProfileForm /> },

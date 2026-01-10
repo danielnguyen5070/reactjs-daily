@@ -18,6 +18,10 @@ const menuItems = [
         label: 'Debounce Search',
         path: '/debounce-input',
     },
+    {
+        label: 'TailwindCSS Flex Grid',
+        path: '/tailwindcss-flex-grid',
+    },
 ];
 
 const Sidebar = () => {
