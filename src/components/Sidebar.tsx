@@ -26,6 +26,10 @@ const menuItems = [
         label: 'Todo',
         path: '/to-do',
     },
+    {
+        label: 'API',
+        path: '/api',
+    },
 ];
 
 const Sidebar = () => {

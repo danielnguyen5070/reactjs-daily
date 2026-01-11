@@ -7,6 +7,7 @@ import CodeSplitting from "./excercises/03.code-splitting";
 import PokemonSearch from "./excercises/04.debounce";
 import FlexGrid from "./excercises/05.tailwindcss-flex-grid";
 import Todo from "./excercises/06.to-do-list";
+import API from "./excercises/07.api-call";
 
 const routes = [
 	{ path: "/action-form", element: <ProfileForm /> },
@@ -15,6 +16,7 @@ const routes = [
 	{ path: "/debounce-input", element: <PokemonSearch /> },
 	{ path: "/flex-grid", element: <FlexGrid /> },
 	{ path: "/to-do", element: <Todo /> },
+	{ path: "/api", element: <API /> },
 ];
 
 function App() {
