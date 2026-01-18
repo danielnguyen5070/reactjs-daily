@@ -30,6 +30,10 @@ const menuItems = [
         label: 'API',
         path: '/api',
     },
+    {
+        label: 'React Query',
+        path: '/react-query',
+    }
 ];
 
 const Sidebar = () => {

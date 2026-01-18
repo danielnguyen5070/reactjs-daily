@@ -8,6 +8,7 @@ import PokemonSearch from "./excercises/04.debounce";
 import FlexGrid from "./excercises/05.tailwindcss-flex-grid";
 import Todo from "./excercises/06.to-do-list";
 import API from "./excercises/07.api-call";
+import ReactQuery from "./excercises/08.react-query";
 
 const routes = [
 	{ path: "/action-form", element: <ProfileForm /> },
@@ -17,6 +18,7 @@ const routes = [
 	{ path: "/flex-grid", element: <FlexGrid /> },
 	{ path: "/to-do", element: <Todo /> },
 	{ path: "/api", element: <API /> },
+	{ path: "/react-query", element: <ReactQuery /> },
 ];
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
 
 	return (
 		<Router>
-			<div className="flex">
+			<div className="flex h-dvh">
 				<div
 					style={{ display: sidebarOpen ? "none" : "block" }}
 					className="shadow-sm shadow-gray-300"
