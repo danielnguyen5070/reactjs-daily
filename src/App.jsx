@@ -9,6 +9,8 @@ import FlexGrid from "./excercises/05.tailwindcss-flex-grid";
 import Todo from "./excercises/06.to-do-list";
 import API from "./excercises/07.api-call";
 import ReactQuery from "./excercises/08.react-query";
+import ReduxSaga from "./excercises/10.redux-saga";
+import ReduxToolkit from "./excercises/09.redux-toolkit";
 
 const routes = [
 	{ path: "/action-form", element: <ProfileForm /> },
@@ -19,6 +21,8 @@ const routes = [
 	{ path: "/to-do", element: <Todo /> },
 	{ path: "/api", element: <API /> },
 	{ path: "/react-query", element: <ReactQuery /> },
+	{ path: "/redux-saga", element: <ReduxSaga /> },
+	{ path: "/redux-toolkit", element: <ReduxToolkit /> },
 ];
 
 function App() {

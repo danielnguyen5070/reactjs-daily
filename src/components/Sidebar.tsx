@@ -33,6 +33,14 @@ const menuItems = [
     {
         label: 'React Query',
         path: '/react-query',
+    },
+    {
+        label: 'Redux Saga',
+        path: '/redux-saga',
+    },
+    {
+        label: 'Redux Toolkit',
+        path: '/redux-toolkit',
     }
 ];
 
