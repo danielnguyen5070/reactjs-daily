@@ -8,7 +8,6 @@ const ReactQuery = () => {
     const [search, setSearch] = useState('')
     const deferredSearch = useDeferredValue(search)
 
-    
     const {
         data,
         fetchNextPage,
