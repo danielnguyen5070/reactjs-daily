@@ -1,0 +1,25 @@
+.user{
+    border: 1px solid #eeeeee;
+    padding: 12px;
+    margin-bottom: 8px;
+    &--no-email{
+        border-color: red;
+    }
+}
+
+.status{
+    padding: 4px 8px;   
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    &--idle{
+        background-color: gray;
+    }
+    &--normal{
+        background-color: green;
+    }
+    &--deleted{
+        background-color: red;
+    }
+}

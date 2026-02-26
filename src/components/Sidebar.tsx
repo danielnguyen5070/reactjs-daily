@@ -41,6 +41,30 @@ const menuItems = [
     {
         label: 'Redux Toolkit',
         path: '/redux-toolkit',
+    },
+    {
+        label: 'Fetch TypeScript',
+        path: '/fetch-typescript',
+    },
+    {
+        label: 'Interview 1',
+        path: '/uniform-interview'
+    },
+    {
+        label: 'Hook Flow',
+        path: '/hook-flow'
+    },
+    {
+        label: "Reder List",
+        path: "/render-list"
+    },
+    {
+        label: "Component",
+        path: "/component"
+    },
+    {
+        label: "Broken Code",
+        path: '/broken-code'
     }
 ];
 
@@ -48,7 +72,7 @@ const Sidebar = () => {
     return (
         <>
             <div
-                className={`fixed top-0 left-0 h-screen w-64 bg-gray-900 text-white z-40 transform transition-transform duration-300 ease-in-out`}
+                className={`overflow-auto fixed top-0 left-0 h-screen w-64 bg-gray-900 text-white z-40 transform transition-transform duration-300 ease-in-out`}
             >
                 {/* Main nav */}
                 <nav className="p-4 space-y-2 mt-12">
