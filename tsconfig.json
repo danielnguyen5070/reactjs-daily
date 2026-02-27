@@ -3,7 +3,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "types": [],
+    "types": ["vitest", "node"],
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
