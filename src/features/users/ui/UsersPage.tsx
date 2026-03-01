@@ -11,7 +11,7 @@ import { useAppSelector } from '@/shared/hooks/useAppSelector'
 const UsersPage = () => {
     const dispatch = useAppDispatch()
 
-    const users = useAppSelector(selectUsers)
+    const { users } = useAppSelector(state => state.users)
     const loading = useAppSelector(selectUsersLoading)
 
     useEffect(() => {

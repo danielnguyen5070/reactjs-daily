@@ -9,6 +9,8 @@ import { ProtectedRoute } from './ProtectedRoute';
 import { RootErrorBoundary } from './RootErrorBoundary';
 import { NotFoundPage } from './NotFoundPage';
 import { Loader } from '@/shared/components/Loader/Loader';
+import LifecyclePage from '@/features/life-cycle/ui/LifecyclePage';
+import PokemonPage from '@/features/fetch-pokemon/ui/PokemonPage';
 
 const LoginPage = lazy(() => import('@features/auth/ui/LoginPage'));
 const DashboardHome = lazy(() => import('@features/dashboard/ui/DashboardHome'));
@@ -52,6 +54,14 @@ export const router = createBrowserRouter([
                     {
                         path: 'users',
                         element: suspense(<UsersPage />),
+                    },
+                    {
+                        path: 'lifecycle',
+                        element: suspense(<LifecyclePage />),
+                    },
+                    {
+                        path: 'Fetching',
+                        element: suspense(<PokemonPage />),
                     },
                 ],
             },

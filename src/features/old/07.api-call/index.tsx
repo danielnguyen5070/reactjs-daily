@@ -14,6 +14,7 @@ import { useState, useEffect, useRef } from "react"
 //     - name: "charizard"
 //       url: "https://pokeapi.co/api/v2/pokemon/6/"
 
+
 type Pokemon = {
     name: string
     url: string
