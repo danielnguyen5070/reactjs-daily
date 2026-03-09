@@ -10,7 +10,7 @@ import { RootErrorBoundary } from './RootErrorBoundary';
 import { NotFoundPage } from './NotFoundPage';
 import { Loader } from '@/shared/components/Loader/Loader';
 import LifecyclePage from '@/features/life-cycle/ui/LifecyclePage';
-import PokemonPage from '@/features/fetch-pokemon/ui/PokemonPage';
+import PostPage from '@/features/post-management/ui/PostPage';
 
 const LoginPage = lazy(() => import('@features/auth/ui/LoginPage'));
 const DashboardHome = lazy(() => import('@features/dashboard/ui/DashboardHome'));
@@ -60,8 +60,8 @@ export const router = createBrowserRouter([
                         element: suspense(<LifecyclePage />),
                     },
                     {
-                        path: 'Fetching',
-                        element: suspense(<PokemonPage />),
+                        path: 'posts',
+                        element: suspense(<PostPage />),
                     },
                 ],
             },

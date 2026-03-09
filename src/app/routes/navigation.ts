@@ -26,4 +26,14 @@ export const navigation: NavItem[] = [
 		path: "/fetching",
 		requiresAuth: true,
 	},
+	{
+		label: "Fetching",
+		path: "/fetching",
+		requiresAuth: true,
+	},
+	{
+		label: "Posts",
+		path: "/posts",
+		requiresAuth: false,
+	},
 ];
