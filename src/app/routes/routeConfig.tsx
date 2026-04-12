@@ -1,76 +1,48 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-
 import { MainLayout } from '../layouts/MainLayout';
-import { AuthLayout } from '../layouts/AuthLayout';
-import { DashboardLayout } from '../layouts/DashboardLayout';
-import { ProtectedRoute } from './ProtectedRoute';
 
-import { RootErrorBoundary } from './RootErrorBoundary';
-import { NotFoundPage } from './NotFoundPage';
-import { Loader } from '@/shared/components/Loader/Loader';
-import LifecyclePage from '@/features/life-cycle/ui/LifecyclePage';
-import PostPage from '@/features/post-management/ui/PostPage';
+// Lazy load (important for performance)
+const Counter = lazy(() => import('@features/counter'));
+const CustomHook = lazy(() => import('@features/custom-hook-use-fetch'));
+const Dropdown = lazy(() => import('@features/dropdown-with-multiselect'));
+const DynamicForm = lazy(() => import('@features/dynamic-form'));
+const FetchData = lazy(() => import('@features/fetch-data'));
+const FormValidation = lazy(() => import('@features/form-validation'));
+const Context = lazy(() => import('@features/global-state-with-context'));
+const InfiniteScroll = lazy(() => import('@features/infinite-scroll'));
+const Modal = lazy(() => import('@features/modal-component'));
+const Pagination = lazy(() => import('@features/pagination-for-a-list'));
+const Todo = lazy(() => import('@features/to-do'));
 
-const LoginPage = lazy(() => import('@features/auth/ui/LoginPage'));
-const DashboardHome = lazy(() => import('@features/dashboard/ui/DashboardHome'));
-const UsersPage = lazy(() => import('@/features/users/ui/UsersPage'));
-
-const suspense = (node: React.ReactNode) => (
-    <Suspense fallback={<Loader />}>{node}</Suspense>
+const withSuspense = (Component: React.ReactNode) => (
+    <Suspense fallback={<div className="p-6">Loading...</div>}>
+        {Component}
+    </Suspense>
 );
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout />,
-        errorElement: <RootErrorBoundary />,
         children: [
-            // index route ("/")
+            // ✅ default page
             {
                 index: true,
-                element: suspense(<DashboardHome />),
-            },
-            {
-                element: <AuthLayout />,
-                children: [
-                    {
-                        path: 'login',
-                        element: suspense(<LoginPage />),
-                    },
-                ],
-            },
-            {
-                element: (
-                    <ProtectedRoute>
-                        <DashboardLayout />
-                    </ProtectedRoute>
-                ),
-                children: [
-                    {
-                        path: 'dashboard',
-                        element: suspense(<DashboardHome />),
-                    },
-                    {
-                        path: 'users',
-                        element: suspense(<UsersPage />),
-                    },
-                    {
-                        path: 'lifecycle',
-                        element: suspense(<LifecyclePage />),
-                    },
-                    {
-                        path: 'posts',
-                        element: suspense(<PostPage />),
-                    },
-                ],
+                element: <div className="p-6">Welcome 👋</div>,
             },
 
-            // 404 fallback
-            {
-                path: '*',
-                element: <NotFoundPage />,
-            },
+            { path: 'counter', element: withSuspense(<Counter />) },
+            { path: 'custom-hook', element: withSuspense(<CustomHook />) },
+            { path: 'dropdown', element: withSuspense(<Dropdown />) },
+            { path: 'dynamic-form', element: withSuspense(<DynamicForm />) },
+            { path: 'fetch-data', element: withSuspense(<FetchData />) },
+            { path: 'form-validation', element: withSuspense(<FormValidation />) },
+            { path: 'context', element: withSuspense(<Context />) },
+            { path: 'infinite-scroll', element: withSuspense(<InfiniteScroll />) },
+            { path: 'modal', element: withSuspense(<Modal />) },
+            { path: 'pagination', element: withSuspense(<Pagination />) },
+            { path: 'to-do', element: withSuspense(<Todo />) },
         ],
     },
 ]);

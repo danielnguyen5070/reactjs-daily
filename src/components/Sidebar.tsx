@@ -3,69 +3,49 @@ import { NavLink } from 'react-router-dom';
 
 const menuItems = [
     {
-        label: 'Form Action',
-        path: '/action-form',
+        label: "counter",
+        path: "/counter",
     },
     {
-        label: 'React Hook Form',
-        path: '/react-hook-form',
+        label: "custom-hook",
+        path: "/custom-hook",
     },
     {
-        label: 'Code Splitting',
-        path: '/code-splitting',
+        label: "dropdown",
+        path: "/dropdown",
     },
     {
-        label: 'Debounce Search',
-        path: '/debounce-input',
+        label: "dynamic-form",
+        path: "/dynamic-form",
     },
     {
-        label: 'TailwindCSS Flex Grid',
-        path: '/flex-grid',
+        label: "fetch-data",
+        path: "/fetch-data",
     },
     {
-        label: 'Todo',
-        path: '/to-do',
+        label: "form-validation",
+        path: "/form-validation",
     },
     {
-        label: 'API',
-        path: '/api',
+        label: "context",
+        path: "/context",
     },
     {
-        label: 'React Query',
-        path: '/react-query',
+        label: "infinite-scroll",
+        path: "/infinite-scroll",
     },
     {
-        label: 'Redux Saga',
-        path: '/redux-saga',
+        label: "modal",
+        path: "/modal",
     },
     {
-        label: 'Redux Toolkit',
-        path: '/redux-toolkit',
+        label: "pagination",
+        path: "/pagination",
     },
     {
-        label: 'Fetch TypeScript',
-        path: '/fetch-typescript',
+        label: "to-do",
+        path: "/to-do",
     },
-    {
-        label: 'Interview 1',
-        path: '/uniform-interview'
-    },
-    {
-        label: 'Hook Flow',
-        path: '/hook-flow'
-    },
-    {
-        label: "Reder List",
-        path: "/render-list"
-    },
-    {
-        label: "Component",
-        path: "/component"
-    },
-    {
-        label: "Broken Code",
-        path: '/broken-code'
-    }
 ];
 
 const Sidebar = () => {
