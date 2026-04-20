@@ -14,6 +14,7 @@ const InfiniteScroll = lazy(() => import('@features/infinite-scroll'));
 const Modal = lazy(() => import('@features/modal-component'));
 const Pagination = lazy(() => import('@features/pagination-for-a-list'));
 const Todo = lazy(() => import('@features/to-do'));
+const Redux = lazy(() => import('@features/redux'));
 
 const withSuspense = (Component: React.ReactNode) => (
     <Suspense fallback={<div className="p-6">Loading...</div>}>
@@ -26,7 +27,6 @@ export const router = createBrowserRouter([
         path: '/',
         element: <MainLayout />,
         children: [
-            // ✅ default page
             {
                 index: true,
                 element: <div className="p-6">Welcome 👋</div>,
@@ -43,6 +43,7 @@ export const router = createBrowserRouter([
             { path: 'modal', element: withSuspense(<Modal />) },
             { path: 'pagination', element: withSuspense(<Pagination />) },
             { path: 'to-do', element: withSuspense(<Todo />) },
+            { path: 'redux', element: withSuspense(<Redux />) },
         ],
     },
 ]);

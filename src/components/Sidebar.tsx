@@ -46,6 +46,10 @@ const menuItems = [
         label: "to-do",
         path: "/to-do",
     },
+    {
+        label: "redux",
+        path: "/redux",
+    },
 ];
 
 const Sidebar = () => {

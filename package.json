@@ -21,6 +21,7 @@
     "@tanstack/react-query-devtools": "^5.91.2",
     "@tanstack/react-virtual": "^3.13.12",
     "@use-gesture/react": "^10.3.1",
+    "axios": "^1.15.1",
     "clsx": "^2.1.1",
     "comlink": "^4.4.2",
     "d3-geo": "^3.1.1",
